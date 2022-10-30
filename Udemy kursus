@@ -1,0 +1,21 @@
+Meelespea enda jaoks Udacity kursuse kohta
+
+## 1.4 Ping
+- Ping: Spetsiifiline käsklus, mis testib kas arvuti saab saata ja vastuvõtta infot antud spetsiifiliselt aadressilt
+-- ping -c3: Tähendab "saada 3 sõnumit, siis välj (e. ära saada enam / välju saatmise režiimist) ja prindi tulemus
+- Kogu suhtlus INeetis on jagatud pakettideks
+-- pakett on lühisõnum, mida üks masin teisele saadab, millel on kirjas saatja ja saaja andmed
+- Kui ma jooksutan G.konsoolis ping -c3 8.8.8.8 ja saan vastuseks "3 paketti edastatud, 3 vastuvõetud, 0,0% kaotatud" siis sellest võib järteldada: 
+--Mu arvuti on IN-ga ühenduses
+--Arvuti aadressil 8.8.8.8 töötab ja on IN-ga ühenduses
+--Mu võrguteenusepakkuja (== ISP) oskab sõnumineerida Google serveritesse
+
+## 1.5 From Ping to http
+-- Http ei põhine pingil
+-- HTTP == HyperTextTransfer/TransportProtocol == andmeedastuse protokoll IN-s
+- Ping sõnumit nimetatakse "echo request" (tagasiside palve?)
+- Iga OS (== Operatsiooni süsteem) mis toetab IN-i, toetab ka Ping-i
+- Ping lihtsalt tahab teada "Kas keegi on seal?" ==> iga OS-ga seadet saab pingida, olgu Linux, bsd, mac, win
+
+
+
