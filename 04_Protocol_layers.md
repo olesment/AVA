@@ -176,8 +176,31 @@ Eventually the other endpoint will be done sending as well, and will send a FIN 
  If you look at tcpdump data for pings or basic DNS lookups, you will not see flags. This is because ping uses ICMP, and basic DNS lookups use UDP. These protocols do not have TCP flags or sequence numbers. [what is basic DNS lookup?]
 
 
+## Why do packets drop
+Fast / slow / fast network can be reason. 
+TCP doent send out data at full speed initially, its a a gradual process\
+If packets are dropped, speed drops and then starts to rise again\
+Routers drop packets and endpoints respond with decreased transfer speeds\
+If router would keep up the speed and push everything throug, the connection wll time out (TTL will run out?)\
+Above is TCP congestion control and thats very important in TCP
 
+## TCP errors. 
 
+Answer: TCp sends some packets, but slower and slower, then after long delay NC exits
+Error: timed out
+## Timeouts
+TCP has number of built in timers, if they run out TCP gives corresponding error pointing to that location\
+Theres other error when one end has sent data but other hasnt responded\
+Libraries upon webapps are built have different timers to catch that\
+
+## Errors quiz
+Errors can be caused: When other host powered off suddenly\
+Windstorm rips the cable\
+Im connecting to a server that doesnt exist
+
+## Outro
+Taking errors into account is something that has to be kept in mind and looked after on every network level\
+Error handling needs to be handled with care
 
 
 ------------------------------------
@@ -188,15 +211,7 @@ Eventually the other endpoint will be done sending as well, and will send a FIN 
 - flags - control bits on the tcp packet. Its a boolean value flag ack is like _roger_ in walkie talkie radio transmission
 - [.] - ack flag (_roger_)
 
-## Why do packets drop
-Fast / slow / fast network can be reason. 
-TCP doent send out data at full speed initially, its a a gradual process\
-If packets are dropped, speed drops and then starts to rise again\
-Routers drop packets and endpoints respond with decreased transfer speeds\
-If router would keep up the speed and push everything throug, the connection wll time out (TTL will run out?)\
-Above is TCP congestion control and thats very important in TCP
 
-## TCP errors. 
 
 
 
